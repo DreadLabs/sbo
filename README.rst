@@ -49,8 +49,8 @@ Now go and place a symlink to the `typo3/`:code: directory in your root director
 
    $ ln -s typo3 admin
 
-Frontend oscurity
-*****************
+Frontend obscurity
+******************
 
 The hooks for removing the `generator`:code: meta tag and the `Powered by...`:code:
 inline comments are immediately active.

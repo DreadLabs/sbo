@@ -13,6 +13,7 @@ This extension is for you. Without modifying the core.
 To use an alternative backend entrypoint, simply put these rules into your .htaccess:
 
 .. code::
+
    # if trying to call HOST/typo3, redirect to frontend dispatcher
    RewriteCond %{REQUEST_URI} ^(\/)?typo3(\/)?$
    # next two lines, @see: http://stackoverflow.com/a/15147347
@@ -25,11 +26,13 @@ To use an alternative backend entrypoint, simply put these rules into your .htac
 They're must reside right before the line:
 
 .. code::
+
    RewriteRule ^(typo3/|t3lib/|tslib/|fileadmin/|typo3conf/|typo3temp/|uploads/|showpic\.php|favicon\.ico) - [L]
 
 Now, go and place a symlink to the typo3/ directory in your root directory:
 
 .. code::
+
    $ ln -s typo3 admin
 
 Enable the extension in the extension manager, and you're done!

@@ -7,7 +7,7 @@ What does it do?
 ----------------
 
 This extension enables you to remount `typo3/`:code:, removing the inline comment
-"...Powered by TYPO3..." and the `generator`:code meta tag from your frontend output
+"...Powered by TYPO3..." and the `generator`:code: meta tag from your frontend output
 without modifying the core.
 
 Why?
@@ -53,4 +53,4 @@ Frontend oscurity
 *****************
 
 The hooks for removing the `generator`:code: meta tag and the `Powered by...`:code:
-inline comments are immediatly active.
+inline comments are immediately active.

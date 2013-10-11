@@ -1,14 +1,28 @@
-Security by obscurity
-=====================
+ext:sob
+=======
 
-Enables you to rename typo3/ and removing the inline comment and the "generator"
-meta tag from your frontend output.
+Security by obscurity for TYPO3.CMS.
 
-Sometimes it's necessary to remove all treasonable footprint which is a sign to
-script kiddies or other criminal people in order to give 'em no input what system
-you're using.
+What does it do?
+----------------
 
-This extension is for you. Without modifying the core.
+This extension enables you to remount `typo3/`:code, removing the inline comment
+"...Powered by TYPO3..." and the `generator`:code meta tag from your frontend output
+without modifying the core.
+
+Why?
+----
+
+The TYPO3.CMS frontend output is an invitation for wanna be hackers and script
+kiddies to apply 0d exploits or other malicious stuff to your TYPO3 instance.
+
+How to
+------
+
+First you have to enable the extension in the extension manager!
+
+Alternative Backend entrypoint
+******************************
 
 To use an alternative backend entrypoint, simply put these rules into your .htaccess:
 
@@ -23,16 +37,20 @@ To use an alternative backend entrypoint, simply put these rules into your .htac
    # forbidden + last redirect to frontend dispatcher
    RewriteRule ^(.*)$ index.php [F,L]
 
-They're must reside right before the line:
+They must reside right before the line:
 
 .. code::
 
    RewriteRule ^(typo3/|t3lib/|tslib/|fileadmin/|typo3conf/|typo3temp/|uploads/|showpic\.php|favicon\.ico) - [L]
 
-Now, go and place a symlink to the typo3/ directory in your root directory:
+Now go and place a symlink to the typo3/ directory in your root directory:
 
 .. code::
 
    $ ln -s typo3 admin
 
-Enable the extension in the extension manager, and you're done!
+Frontend oscurity
+*****************
+
+The hooks for removing the `generator`:code meta tag and the `Powered by...`:code
+inline comments are immediatly active.

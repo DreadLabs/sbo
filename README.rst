@@ -6,7 +6,7 @@ Security by obscurity for TYPO3.CMS.
 What does it do?
 ----------------
 
-This extension enables you to remount `typo3/`:code, removing the inline comment
+This extension enables you to remount `typo3/`:code:, removing the inline comment
 "...Powered by TYPO3..." and the `generator`:code meta tag from your frontend output
 without modifying the core.
 
@@ -43,7 +43,7 @@ They must reside right before the line:
 
    RewriteRule ^(typo3/|t3lib/|tslib/|fileadmin/|typo3conf/|typo3temp/|uploads/|showpic\.php|favicon\.ico) - [L]
 
-Now go and place a symlink to the typo3/ directory in your root directory:
+Now go and place a symlink to the `typo3/`:code: directory in your root directory:
 
 .. code::
 
@@ -52,5 +52,5 @@ Now go and place a symlink to the typo3/ directory in your root directory:
 Frontend oscurity
 *****************
 
-The hooks for removing the `generator`:code meta tag and the `Powered by...`:code
+The hooks for removing the `generator`:code: meta tag and the `Powered by...`:code:
 inline comments are immediatly active.

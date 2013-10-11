@@ -1,7 +1,8 @@
 Security by obscurity
 =====================
 
-For TYPO3.CMS.
+Enables you to rename typo3/ and removing the inline comment and the "generator"
+meta tag from your frontend output.
 
 Sometimes it's necessary to remove all treasonable footprint which is a sign to
 script kiddies or other criminal people in order to give 'em no input what system

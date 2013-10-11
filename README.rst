@@ -1,4 +1,4 @@
-ext:sob
+ext:sbo
 =======
 
 Security by obscurity for TYPO3.CMS.

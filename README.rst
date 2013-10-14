@@ -30,18 +30,18 @@ To use an alternative backend entrypoint, simply put these rules into your .htac
 
    # if trying to call HOST/typo3, redirect to frontend dispatcher
    RewriteCond %{REQUEST_URI} ^(\/)?typo3(\/)?$
-   # next two lines, @see: http://stackoverflow.com/a/15147347
-   RewriteCond %{HTTP_HOST} ^(.*)$
-   # if the referrer is not the host
-   RewriteCond %{HTTP_REFERER} !^(.*)?%1(.*)$
+   RewriteCond %{HTTP_REFERER} !^(.*)?www\.example\.org(.*)$
    # forbidden + last redirect to frontend dispatcher
-   RewriteRule ^(.*)$ index.php [F,L]
+   RewriteRule ^(.*)$ - [F,L]
 
 They must reside right before the line:
 
 .. code::
 
    RewriteRule ^(typo3/|t3lib/|tslib/|fileadmin/|typo3conf/|typo3temp/|uploads/|showpic\.php|favicon\.ico) - [L]
+
+Please ensure, to replace the string `www\.example\.org`:code: with your host
+name.
 
 Now go and place a symlink to the `typo3/`:code: directory in your root directory:
 

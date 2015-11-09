@@ -103,7 +103,7 @@ class PageRendererHook {
     protected function getCommentHookLine($commentFromPageRenderer) {
         $comment = trim($commentFromPageRenderer);
 
-        $comment = substr($comment, 0, strlen($this->copyrightInlineCommentHookLine));
+        $comment = substr(trim($comment), 0, strlen($this->copyrightInlineCommentHookLine));
 
         return $comment;
     }
